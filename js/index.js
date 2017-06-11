@@ -1,42 +1,49 @@
 $(() => {
+    var i = 0;
+    let score = 0;
+    let indexImg = 1;
+
     $("select").on("change", (e) => {
         e.preventDefault();
         const option = $('#select').val();
-        const i = 0;
 
         if (option == "peru") {
             $('#mexico').addClass("none");
             $('#peru').toggleClass("none");
 
-            const peruPhoto = "img/fotos/peru/" + peru[i].image;
+            var peruPhoto = "img/fotos/peru/" + peru[i].image;
             const image = $('#peru img');
             image.attr("src", peruPhoto);
+
+            function comparePeru(valor) {
+                if (valor.toLowerCase() != peru[i].name) {
+                    score += 1;
+                    console.log(score);
+                    return score;
+                }
+            }
+
+            function photoChange(valor) {
+                peruPhoto = "img/fotos/peru/" + peru[valor].image;
+                image.attr("src", peruPhoto);
+            }
+
+            $('#peru button').on('click', () => {
+                comparePeru($('input').val());
+                if (score >= 5) {
+                    i += 1;
+                    photoChange(i);
+                }
+            });
 
         } else {
             $('#peru').addClass("none");
             $('#mexico').toggleClass("none");
         }
-    });
-
-    let score = 0;
-    let indexImg = 1;
-
-
-    function compare(valor) {
-        if (valor.toLowerCase() != peru[i].name) {
-            score++;
-        }
-    }
-
-    function showPhoto(elem) {
-
-
-    }
-
-    $('button').on('click', () => {
-        compare($('input').val());
 
     });
+
+
     // for (i = 0; i < peru.lenght;) {
     //     const photo = peru[i].image;
     //     image.attr("src", "img/fotos/peru/" + photo);
@@ -57,7 +64,6 @@ $(() => {
 // showDivs(slideIndex);
 
 // function showDivs(n) {
-//   var i;
 //   if (n > peru.length) {slideIndex = 1}    
 //   if (n < 1) {slideIndex = peru.length}
 //   for (i = 0; i < peru.length; i++) {
