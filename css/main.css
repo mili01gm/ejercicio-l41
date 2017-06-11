@@ -1,0 +1,47 @@
+/*===============================
+=            GENERAL            =
+===============================*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.rokkitt {
+    font-family: 'Rokkitt', sans-serif;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.bg-dark {
+    background-color: #333;
+}
+
+.white {
+    color: #fff;
+}
+
+
+/*=====  End GENERAL  ======*/
+
+.line {
+    background-color: #000;
+    width: 5%;
+    height: 2px;
+    border: 0;
+    margin-bottom: 20px;
+}
+
+.score-board {
+    display: inline-block;
+}

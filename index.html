@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smash Faces! | Laboratoria</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900|Rokkitt:400,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="jumbotron">
+        <div class="container">
+            <h1 class="rokkitt">Smash Faces</h1>
+            <div class="line"></div>
+            <p>Bienvenida a Smash Face! Tu misión: identificar a tus compañeras de Laboratoria. Tienes 5 intentos para adivinar el nombre de cada una. Si aciertas tienes 5 puntos, si fallas es un punto menos. <br>Suerte!</p>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="" class="rokkitt">Elige tu sede: </label>
+                    <select class="select roboto" id="select">
+                        <option value="sede" hidden>Sede</option>
+                        <option value="peru">Perú</option>
+                        <option value="mexico">México</option>
+                    </select>
+                </div>
+                <div class="score-board rokkitt">
+                    <label for="puntos">Puntos: </label>
+                    <span id="score">0</span>
+                    <span>puntos</span>
+                </div>
+            </form>
+        </div>
+    </header>
+    <div class="game">
+        <div id="peru" class="container-fluid none country">
+            <div class="row">
+                <div class="col-md-5">
+                    <img class="img-responsive">
+                </div>
+                <div class="col-md-7 bg-dark white">
+                    <div class="row">
+                        <form action="" class="col-md-12 form">
+                            <div class="form-group">
+                                <label for="">¿Cuál es el nombre de la coder?</label>
+                                <input type="text" class="form-control" id="coder-name">
+                            </div>
+                            <button type="button">Comprobar</button>
+                        </form>
+                        <div>
+                            <p class="">Sigue intentando</p>
+                            <p class="">Fallaste</p>
+                            <p class="">¡Excelente, acertaste!</p>
+                        </div>
+                        <div class="">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mexico" class="container-fluid none country">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="" alt="">
+                </div>
+                <div class="col-md-7 bg-dark">
+                    <div class="row">
+                        <form action="" class="col-md-12 form">
+                            <div class="form-group">
+                                <label for="" class="white">¿Cuál es el nombre de la coder?</label>
+                                <input type="text" class="form-control" id="coder-name">
+                            </div>
+                            <button type="button">Comprobar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/peru.js"></script>
+    <script src="js/mexico.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
