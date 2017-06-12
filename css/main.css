@@ -1,7 +1,3 @@
-/*===============================
-=            GENERAL            =
-===============================*/
-
 html,
 body {
     margin: 0;
@@ -27,8 +23,15 @@ body {
     color: #fff;
 }
 
+.jumbotron {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 
-/*=====  End GENERAL  ======*/
+.col-md-5 {
+    margin: 0;
+    padding: 0;
+}
 
 .line {
     background-color: #000;
@@ -40,4 +43,15 @@ body {
 
 .score-board {
     display: inline-block;
+}
+
+.div-game {
+    height: 100vh;
+    padding: 40px 20px;
+}
+
+form,
+#results {
+    margin: 10px auto;
+    padding: 40px 20px;
 }
