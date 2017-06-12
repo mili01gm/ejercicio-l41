@@ -11,6 +11,11 @@ body {
     font-family: 'Rokkitt', sans-serif;
 }
 
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
 .none {
     display: none;
 }
@@ -27,6 +32,7 @@ body {
     margin-bottom: 0;
     padding: 10px;
     padding-bottom: 0;
+    text-align: center;
 }
 
 .jumbotron h1 {
@@ -34,7 +40,8 @@ body {
 }
 
 .jumbotron p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    padding: 0 30px;
 }
 
 .col-md-5 {
@@ -47,7 +54,7 @@ body {
     width: 5%;
     height: 2px;
     border: 0;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
 }
 
 .score-board {
@@ -59,7 +66,63 @@ body {
     padding: 40px 20px;
 }
 
-form {
+#miss,
+#fail,
+#done {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.jumbotron form label {
+    font-size: 2rem;
+}
+
+.jumbotron form select {
+    margin-left: 10px;
+}
+
+.jumbotron form span {
+    font-size: 2rem;
+}
+
+#peru form,
+#mexico form {
     margin: 10px auto;
     padding: 20px;
+    text-align: center;
+}
+
+#peru form label,
+#mexico form label {
+    font-size: 2.5rem;
+}
+
+.form-control {
+    width: 70%;
+    height: 10vh;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2.5rem;
+}
+
+#peru form button,
+#mexico form button {
+    background-color: #f9a91a;
+    border: 0;
+    border-radius: 10px;
+    width: 20%;
+    height: 40px;
+    font-size: 2rem;
+    margin: 20px auto;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+#peru form button:hover,
+#mexico form button:hover,
+#peru form button:focus,
+#mexico form button:focus {
+    outline: none;
+    transform: scale(1.2);
 }

@@ -60,6 +60,7 @@ $(() => {
                 fails += 1;
                 studentsP += 1;
                 inputP.val("");
+                $('#fail-name').text()
                 $('#peru .fail').fadeIn(600).delay(1200).fadeOut(600);
                 $('#score').text(puntaje);
                 return photoPeru(i);
@@ -84,7 +85,6 @@ $(() => {
         nombre = peru[i].name;
         imageP.fadeIn(2000).attr("src", peruPhoto);
         $('#name').text(nombre);
-        inputP.attr("autofocus", "");
         score = 0;
     };
 

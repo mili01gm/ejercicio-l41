@@ -16,8 +16,8 @@
         <div class="container">
             <h1 class="rokkitt">Smash Faces</h1>
             <div class="line"></div>
-            <p>Bienvenida a Smash Face! Tu misión: identificar a tus compañeras de Laboratoria. Tienes 5 intentos para adivinar el nombre de cada una. Si aciertas tienes 5 puntos, si fallas es un punto menos. <br>Suerte!</p>
-            <form class="form-inline">
+            <p>Bienvenida a Smash Face! Tu misión: identificar a tus compañeras de Laboratoria. <br>Tienes 5 intentos para adivinar el nombre de cada una. Si aciertas tienes 5 puntos, si fallas es un punto menos. Suerte!</p>
+            <form class="form-inline flex">
                 <div class="form-group">
                     <label for="" class="rokkitt">Elige tu sede: </label>
                     <select class="select roboto" id="select">
@@ -37,48 +37,48 @@
     <div class="game">
         <div id="peru" class="container-fluid none country">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-5 bg-dark">
                     <img class="img-responsive">
                 </div>
                 <div class="div-game col-md-7 bg-dark white">
                     <div class="row">
                         <form action="" class="col-md-12 form">
                             <div class="form-group">
-                                <label for="">¿Cuál es el nombre de la coder?</label>
+                                <label for="" class="rokkitt">¿Cuál es el nombre de la coder?</label>
                                 <input type="text" class="form-control" id="coder-name" autofocus>
                             </div>
                             <button type="button">Comprobar</button>
                         </form>
                         <div id="results" class="">
                             <p id="miss" class="miss" hidden>¡Sigue intentando!</p>
-                            <p id="fail" class="fail" hidden>Fallaste :(</p>
-                            <p id="done" class="done" hidden>¡Excelente, acertaste!</p>
+                            <p id="fail" class="fail" hidden>Fallaste, -1 punto</p>
+                            <p id="done" class="done" hidden>¡Excelente, acertaste! +5 puntos</p>
                         </div>
-                        <div id="name"></div>
+                        <div id="name" hidden></div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="mexico" class="container-fluid none country">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-5 bg-dark">
                     <img class="img-responsive">
                 </div>
                 <div class="div-game col-md-7 bg-dark white">
                     <div class="row">
                         <form action="" class="col-md-12 form">
                             <div class="form-group">
-                                <label for="">¿Cuál es el nombre de la coder?</label>
+                                <label for="" class="rokkitt">¿Cuál es el nombre de la coder?</label>
                                 <input type="text" class="form-control" id="coder-name" autofocus>
                             </div>
                             <button type="button">Comprobar</button>
                         </form>
                         <div id="results" class="">
                             <p id="miss" class="miss" hidden>¡Sigue intentando!</p>
-                            <p id="fail" class="fail" hidden>Fallaste :(</p>
-                            <p id="done" class="done" hidden>¡Excelente, acertaste!</p>
+                            <p id="fail" class="fail" hidden>Fallaste, -1 punto</p>
+                            <p id="done" class="done" hidden>¡Excelente, acertaste!+5 puntos</p>
                         </div>
-                        <div id="mexico-name"></div>
+                        <div id="mexico-name" hidden></div>
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                         <p>Tu puntaje fue:</p>
                         <span id="final-score"></span>
                         <hr>
-                        <a href="#">Inténtalo nuevamente!</a>
+                        <a href="index.html">Inténtalo nuevamente!</a>
                     </div>
                 </div>
             </div>
