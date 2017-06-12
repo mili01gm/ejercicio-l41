@@ -66,23 +66,37 @@
                 </div>
                 <div class="div-game col-md-7 bg-dark white">
                     <div class="row">
-                        <form action="" class="col-md-10 col-md-push-1 text-center">
+                        <form action="" class="col-md-12 form">
                             <div class="form-group">
                                 <label for="">¿Cuál es el nombre de la coder?</label>
-                                <input type="text" class="form-control" id="coder-name">
+                                <input type="text" class="form-control" id="coder-name" autofocus>
                             </div>
                             <button type="button">Comprobar</button>
                         </form>
-                        <div>
-                            <p id="miss" class="miss">Sigue intentando</p>
-                            <p id="fail" class="fail">Fallaste</p>
-                            <p id="done" class="done">¡Excelente, acertaste!</p>
+                        <div id="results" class="">
+                            <p id="miss" class="miss" hidden>¡Sigue intentando!</p>
+                            <p id="fail" class="fail" hidden>Fallaste :(</p>
+                            <p id="done" class="done" hidden>¡Excelente, acertaste!</p>
                         </div>
+                        <div id="mexico-name"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="final" class="container-fluid none"></div>
+        <div id="final" class="container-fluid none">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>¡Terminó el juego!</h2>
+                        <hr>
+                        <p>Tu puntaje fue:</p>
+                        <span id="final-score"></span>
+                        <hr>
+                        <a href="#">Inténtalo nuevamente!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
