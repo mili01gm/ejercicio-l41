@@ -34,6 +34,13 @@ body {
     color: #fff;
 }
 
+
+/*
+===================
+HEADER
+===================
+*/
+
 .jumbotron {
     margin-bottom: 0;
     padding: 10px;
@@ -50,9 +57,16 @@ body {
     padding: 0 30px;
 }
 
-.col-md-5 {
-    margin: 0;
-    padding: 0;
+.jumbotron form label {
+    font-size: 2rem;
+}
+
+.jumbotron form select {
+    margin-left: 10px;
+}
+
+.jumbotron form span {
+    font-size: 2rem;
 }
 
 .line {
@@ -61,6 +75,18 @@ body {
     height: 2px;
     border: 0;
     margin: 0 auto 20px;
+}
+
+
+/*
+===================
+GAME
+===================
+*/
+
+.col-md-5 {
+    margin: 0;
+    padding: 0;
 }
 
 .score-board {
@@ -77,18 +103,6 @@ body {
 #done {
     font-size: 2.2rem;
     text-align: center;
-}
-
-.jumbotron form label {
-    font-size: 2rem;
-}
-
-.jumbotron form select {
-    margin-left: 10px;
-}
-
-.jumbotron form span {
-    font-size: 2rem;
 }
 
 #peru form,
@@ -131,4 +145,16 @@ body {
 #mexico form button:focus {
     outline: none;
     transform: scale(1.2);
+}
+
+
+/*
+===================
+FINAL SCORE
+===================
+*/
+
+#final {
+    text-align: center;
+    font-size: 2rem;
 }
