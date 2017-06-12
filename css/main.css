@@ -25,7 +25,16 @@ body {
 
 .jumbotron {
     margin-bottom: 0;
+    padding: 10px;
     padding-bottom: 0;
+}
+
+.jumbotron h1 {
+    font-size: 4rem;
+}
+
+.jumbotron p {
+    font-size: 1.3rem;
 }
 
 .col-md-5 {
@@ -46,12 +55,11 @@ body {
 }
 
 .div-game {
-    height: 100vh;
+    height: 70vh;
     padding: 40px 20px;
 }
 
-form,
-#results {
+form {
     margin: 10px auto;
-    padding: 40px 20px;
+    padding: 20px;
 }

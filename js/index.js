@@ -16,27 +16,27 @@ $(() => {
             $('#mexico').addClass("none");
             $('#peru').toggleClass("none");
 
-            return photoPeru(i);
-            // let peruPhoto = "img/fotos/peru/" + peru[i].image;
-            // let nombre = peru[i].name;
-            // imageP.attr("src", peruPhoto);
-            // $('#name').text(nombre);
+            let peruPhoto = "img/fotos/peru/" + peru[i].image;
+            let nombre = peru[i].name;
+            imageP.attr("src", peruPhoto);
+            $('#name').text(nombre);
         } else {
             $('#peru').addClass("none");
             $('#mexico').toggleClass("none");
 
-            // let mexPhoto = "img/fotos/mexico/" + mexico[i].image;
-            // imageM.attr("src", mexPhoto);
+            let mexPhoto = "img/fotos/mexico/" + mexico[i].image;
+            imageM.attr("src", mexPhoto);
         }
     });
 
     // Funciones PERU
     $('#peru button').on('click', (e) => {
         e.preventDefault();
-        comparePeru(inputP.val(), i);
+        inputP.attr("autofocus");
+        comparePeru(inputP.val());
     });
 
-    function comparePeru(valor, i) {
+    function comparePeru(valor) {
         if (valor.toLowerCase() != $('#name').text().toLowerCase()) {
             score++;
             if (score < 5) {
@@ -55,6 +55,7 @@ $(() => {
             $('#peru input').text = "";
             return score;
         } else if (valor.toLowerCase() === peru[i].name.toLowerCase() && score < 5) {
+            i++;
             puntaje += 5;
             score = 0;
             inputP.val("");
@@ -65,17 +66,12 @@ $(() => {
     }
 
     function photoPeru(i) {
-        for (i; i < peru.lenght; i++) {
-            peruPhoto = "img/fotos/peru/" + peru[i].image;
-            nombre = peru[i].name;
-            imageP.attr("src", peruPhoto);
-            $('#name').text(nombre);
-            score = 0;
-
-            if (i == peru.lenght) {
-                imageP.removeAttr("src");
-            }
-        }
+        peruPhoto = "img/fotos/peru/" + peru[i].image;
+        nombre = peru[i].name;
+        imageP.attr("src", peruPhoto);
+        $('#name').text(nombre);
+        inputP.attr("autofocus", "");
+        score = 0;
     };
 
     //Funciones MEXICO
