@@ -1,12 +1,12 @@
 $(() => {
     let i = 0;
+    let puntaje = 0;
     let score = 0;
     let indexImg = 1;
     const imageP = $('#peru img');
     const imageM = $('#mexico img');
-    $('#miss').hide();
-    $('#fail').hide();
-    $('#done').hide();
+    const inputP = $('#peru input');
+    const inputM = $('#mexico input');
 
     $("select").on("change", (e) => {
         e.preventDefault();
@@ -16,52 +16,66 @@ $(() => {
             $('#mexico').addClass("none");
             $('#peru').toggleClass("none");
 
-            let peruPhoto = "img/fotos/peru/" + peru[i].image;
-            imageP.attr("src", peruPhoto);
-
+            return photoPeru(i);
+            // let peruPhoto = "img/fotos/peru/" + peru[i].image;
+            // let nombre = peru[i].name;
+            // imageP.attr("src", peruPhoto);
+            // $('#name').text(nombre);
         } else {
             $('#peru').addClass("none");
             $('#mexico').toggleClass("none");
 
-            let mexPhoto = "img/fotos/mexico/" + mexico[i].image;
-            imageM.attr("src", mexPhoto);
+            // let mexPhoto = "img/fotos/mexico/" + mexico[i].image;
+            // imageM.attr("src", mexPhoto);
         }
-
     });
 
     // Funciones PERU
     $('#peru button').on('click', (e) => {
         e.preventDefault();
-        comparePeru($('#peru input').val());
+        comparePeru(inputP.val(), i);
     });
 
-    function comparePeru(valor) {
-        if (valor.toLowerCase() != peru[i].name.toLowerCase()) {
-            score += 1;
+    function comparePeru(valor, i) {
+        if (valor.toLowerCase() != $('#name').text().toLowerCase()) {
+            score++;
             if (score < 5) {
-                $('#peru input').val(" ");
-                $('#miss').show();
-                setTimeout($('#miss').hide(), 2000);
-
+                inputP.val("");
+                $('#peru .miss').fadeIn(600).delay(1200).fadeOut(600);
                 return score;
             } else if (score >= 5) {
                 i += 1;
+                puntaje -= 1;
+                inputP.val("");
+                $('#peru .fail').fadeIn(600).delay(1200).fadeOut(600);
+                $('#score').text(puntaje);
                 return photoPeru(i);
             }
 
             $('#peru input').text = "";
             return score;
-        } else if (valor.toLowerCase() === peru[i].name.toLowerCase()) {
-            i += 1;
+        } else if (valor.toLowerCase() === peru[i].name.toLowerCase() && score < 5) {
+            puntaje += 5;
             score = 0;
+            inputP.val("");
+            $('#peru .done').fadeIn(600).delay(1200).fadeOut(600);
+            $('#score').text(puntaje);
             return photoPeru(i);
         }
     }
 
-    function photoPeru(valor) {
-        peruPhoto = "img/fotos/peru/" + peru[valor].image;
-        imageP.attr("src", peruPhoto);
-        score = 0;
+    function photoPeru(i) {
+        for (i; i < peru.lenght; i++) {
+            peruPhoto = "img/fotos/peru/" + peru[i].image;
+            nombre = peru[i].name;
+            imageP.attr("src", peruPhoto);
+            $('#name').text(nombre);
+            score = 0;
+
+            if (i == peru.lenght) {
+                imageP.removeAttr("src");
+            }
+        }
     };
 
     //Funciones MEXICO
